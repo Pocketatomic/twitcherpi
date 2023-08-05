@@ -3,10 +3,10 @@
 
 from datetime import datetime
 from picamera import PiCamera
-from dal2 import ImageDocument
+from dal import ImageDocument
 from io import BytesIO
 
-image_docuement = ImageDocument()
+image_document = ImageDocument()
 
 camera = PiCamera()
 camera.resolution = (1024, 768)
@@ -20,9 +20,9 @@ def take_picture():
 
 def save_image(image):
 
-    image_docuement.__captured_date = str(datetime.now().isoformat)
-    image_docuement.__author = "Andrew Butler"
-    image_docuement.save_image(image)
+    image_document.__captured_date = str(datetime.now().isoformat)
+    image_document.__author = "Andrew Butler"
+    image_document.save_image(image)
 
 img = take_picture()
 save_image(img)
