@@ -2,7 +2,7 @@
 # 27/07/2023
 
 from datetime import datetime
-from picamera import PiCamera
+from picamera2 import PiCamera
 from dal import ImageDocument
 from io import BytesIO
 
